@@ -1,0 +1,232 @@
+{
+ "_comentario": "Resposta gravada da Overpass API para o municipio 3550308 (Sao Paulo), reduzida e completada com elementos sinteticos que cobrem todo o mapeamento de tags da especificacao.",
+ "version": 0.6,
+ "generator": "Overpass API (gravado)",
+ "elements": [
+  {
+   "type": "node",
+   "id": 2177673312,
+   "lat": -23.6070955,
+   "lon": -46.6690092,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "JorgeAlex"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2288346260,
+   "lat": -23.736805,
+   "lon": -46.6937009,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Shopping 21"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2634702497,
+   "lat": -23.5272064,
+   "lon": -46.6937033,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Maximus"
+   }
+  },
+  {
+   "type": "node",
+   "id": 2700754142,
+   "lat": -23.5953247,
+   "lon": -46.6266365,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Varejão"
+   }
+  },
+  {
+   "type": "node",
+   "id": 4375674821,
+   "lat": -23.6332725,
+   "lon": -46.7224348,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Feira Orgânica Burle Marx",
+    "opening_hours": "Th",
+    "organic": "only"
+   }
+  },
+  {
+   "type": "node",
+   "id": 4387531237,
+   "lat": -23.5864191,
+   "lon": -46.6935458,
+   "tags": {
+    "amenity": "marketplace",
+    "name": "Varanda"
+   }
+  },
+  {
+   "type": "way",
+   "id": 900001,
+   "center": {
+    "lat": -23.5505,
+    "lon": -46.6333
+   },
+   "tags": {
+    "place": "square",
+    "name": "Praça da Sé"
+   }
+  },
+  {
+   "type": "way",
+   "id": 900002,
+   "center": {
+    "lat": -23.5874,
+    "lon": -46.6576
+   },
+   "tags": {
+    "leisure": "park",
+    "name": "Parque do Ibirapuera"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900003,
+   "lat": -23.5612,
+   "lon": -46.656,
+   "tags": {
+    "shop": "supermarket",
+    "name": "Mercado Central"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900004,
+   "lat": -23.562,
+   "lon": -46.657,
+   "tags": {
+    "shop": "bakery",
+    "name": "Padaria do Bairro"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900005,
+   "lat": -23.563,
+   "lon": -46.658,
+   "tags": {
+    "amenity": "bar",
+    "name": "Bar do Zé"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900006,
+   "lat": -23.564,
+   "lon": -46.659,
+   "tags": {
+    "amenity": "cafe",
+    "name": "Café da Esquina"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900007,
+   "lat": -23.565,
+   "lon": -46.66,
+   "tags": {
+    "amenity": "fast_food",
+    "name": "Lanches da Praça"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900008,
+   "lat": -23.566,
+   "lon": -46.661,
+   "tags": {
+    "amenity": "bus_station",
+    "name": "Terminal Bandeira"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900009,
+   "lat": -23.567,
+   "lon": -46.662,
+   "tags": {
+    "shop": "hardware",
+    "name": "Casa de Ferragens"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900010,
+   "lat": -23.568,
+   "lon": -46.663,
+   "tags": {
+    "shop": "convenience",
+    "name": "Conveniência 24h"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900011,
+   "lat": -23.569,
+   "lon": -46.664,
+   "tags": {
+    "amenity": "restaurant",
+    "name": "Restaurante Popular"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900012,
+   "lat": -23.57,
+   "lon": -46.665,
+   "tags": {
+    "railway": "station",
+    "name": "Estação da Luz"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900013,
+   "lat": -23.571,
+   "lon": -46.666,
+   "tags": {
+    "amenity": "cafe"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900014,
+   "lat": -23.572,
+   "lon": -46.667,
+   "tags": {
+    "amenity": "marketplace"
+   }
+  },
+  {
+   "type": "way",
+   "id": 900015,
+   "center": {
+    "lat": -23.573,
+    "lon": -46.668
+   },
+   "tags": {
+    "place": "square"
+   }
+  },
+  {
+   "type": "node",
+   "id": 900016,
+   "lat": -34.6037,
+   "lon": -58.3816,
+   "tags": {
+    "amenity": "bar",
+    "name": "Bar de Buenos Aires"
+   }
+  }
+ ]
+}

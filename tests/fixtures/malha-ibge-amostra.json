@@ -1,0 +1,356 @@
+{
+ "comentario": "Amostra da malha municipal do IBGE usada em testes. Cada municipio e um retangulo aproximando a area real. A carga nacional (5.570 municipios) roda somente em producao, com scripts/carregar-municipios.ts.",
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "3550308",
+    "nome": "São Paulo",
+    "uf": "SP"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -46.826,
+       -24.008
+      ],
+      [
+       -46.365,
+       -24.008
+      ],
+      [
+       -46.365,
+       -23.357
+      ],
+      [
+       -46.826,
+       -23.357
+      ],
+      [
+       -46.826,
+       -24.008
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "3509502",
+    "nome": "Campinas",
+    "uf": "SP"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -47.2,
+       -23.06
+      ],
+      [
+       -46.87,
+       -23.06
+      ],
+      [
+       -46.87,
+       -22.73
+      ],
+      [
+       -47.2,
+       -22.73
+      ],
+      [
+       -47.2,
+       -23.06
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "3304557",
+    "nome": "Rio de Janeiro",
+    "uf": "RJ"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -43.8,
+       -23.08
+      ],
+      [
+       -43.1,
+       -23.08
+      ],
+      [
+       -43.1,
+       -22.74
+      ],
+      [
+       -43.8,
+       -22.74
+      ],
+      [
+       -43.8,
+       -23.08
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "3106200",
+    "nome": "Belo Horizonte",
+    "uf": "MG"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -44.06,
+       -20.06
+      ],
+      [
+       -43.86,
+       -20.06
+      ],
+      [
+       -43.86,
+       -19.77
+      ],
+      [
+       -44.06,
+       -19.77
+      ],
+      [
+       -44.06,
+       -20.06
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "4314902",
+    "nome": "Porto Alegre",
+    "uf": "RS"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -51.32,
+       -30.27
+      ],
+      [
+       -51,
+       -30.27
+      ],
+      [
+       -51,
+       -29.93
+      ],
+      [
+       -51.32,
+       -29.93
+      ],
+      [
+       -51.32,
+       -30.27
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "1302603",
+    "nome": "Manaus",
+    "uf": "AM"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -60.3,
+       -3.3
+      ],
+      [
+       -59.6,
+       -3.3
+      ],
+      [
+       -59.6,
+       -2.55
+      ],
+      [
+       -60.3,
+       -2.55
+      ],
+      [
+       -60.3,
+       -3.3
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "2927408",
+    "nome": "Salvador",
+    "uf": "BA"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -38.56,
+       -13.02
+      ],
+      [
+       -38.3,
+       -13.02
+      ],
+      [
+       -38.3,
+       -12.73
+      ],
+      [
+       -38.56,
+       -12.73
+      ],
+      [
+       -38.56,
+       -13.02
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "2611606",
+    "nome": "Recife",
+    "uf": "PE"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -35.02,
+       -8.15
+      ],
+      [
+       -34.86,
+       -8.15
+      ],
+      [
+       -34.86,
+       -7.93
+      ],
+      [
+       -35.02,
+       -7.93
+      ],
+      [
+       -35.02,
+       -8.15
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "4106902",
+    "nome": "Curitiba",
+    "uf": "PR"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -49.39,
+       -25.65
+      ],
+      [
+       -49.18,
+       -25.65
+      ],
+      [
+       -49.18,
+       -25.34
+      ],
+      [
+       -49.39,
+       -25.34
+      ],
+      [
+       -49.39,
+       -25.65
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "codarea": "5300108",
+    "nome": "Brasília",
+    "uf": "DF"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -48.29,
+       -16.05
+      ],
+      [
+       -47.31,
+       -16.05
+      ],
+      [
+       -47.31,
+       -15.5
+      ],
+      [
+       -48.29,
+       -15.5
+      ],
+      [
+       -48.29,
+       -16.05
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

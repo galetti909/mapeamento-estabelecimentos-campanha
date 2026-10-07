@@ -1,0 +1,442 @@
+[
+ {
+  "id": 1100015,
+  "nome": "Alta Floresta D'Oeste",
+  "microrregiao": {
+   "id": 11006,
+   "nome": "Cacoal",
+   "mesorregiao": {
+    "id": 1102,
+    "nome": "Leste Rondoniense",
+    "UF": {
+     "id": 11,
+     "sigla": "RO",
+     "nome": "Rondônia",
+     "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 110005,
+   "nome": "Cacoal",
+   "regiao-intermediaria": {
+    "id": 1102,
+    "nome": "Ji-Paraná",
+    "UF": {
+     "id": 11,
+     "sigla": "RO",
+     "nome": "Rondônia",
+     "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 3106200,
+  "nome": "Belo Horizonte",
+  "microrregiao": {
+   "id": 31030,
+   "nome": "Belo Horizonte",
+   "mesorregiao": {
+    "id": 3107,
+    "nome": "Metropolitana de Belo Horizonte",
+    "UF": {
+     "id": 31,
+     "sigla": "MG",
+     "nome": "Minas Gerais",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 310001,
+   "nome": "Belo Horizonte",
+   "regiao-intermediaria": {
+    "id": 3101,
+    "nome": "Belo Horizonte",
+    "UF": {
+     "id": 31,
+     "sigla": "MG",
+     "nome": "Minas Gerais",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 5300108,
+  "nome": "Brasília",
+  "microrregiao": {
+   "id": 53001,
+   "nome": "Brasília",
+   "mesorregiao": {
+    "id": 5301,
+    "nome": "Distrito Federal",
+    "UF": {
+     "id": 53,
+     "sigla": "DF",
+     "nome": "Distrito Federal",
+     "regiao": {
+      "id": 5,
+      "sigla": "CO",
+      "nome": "Centro-Oeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 530001,
+   "nome": "Distrito Federal",
+   "regiao-intermediaria": {
+    "id": 5301,
+    "nome": "Distrito Federal",
+    "UF": {
+     "id": 53,
+     "sigla": "DF",
+     "nome": "Distrito Federal",
+     "regiao": {
+      "id": 5,
+      "sigla": "CO",
+      "nome": "Centro-Oeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 3509502,
+  "nome": "Campinas",
+  "microrregiao": {
+   "id": 35032,
+   "nome": "Campinas",
+   "mesorregiao": {
+    "id": 3507,
+    "nome": "Campinas",
+    "UF": {
+     "id": 35,
+     "sigla": "SP",
+     "nome": "São Paulo",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 350038,
+   "nome": "Campinas",
+   "regiao-intermediaria": {
+    "id": 3510,
+    "nome": "Campinas",
+    "UF": {
+     "id": 35,
+     "sigla": "SP",
+     "nome": "São Paulo",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 4106902,
+  "nome": "Curitiba",
+  "microrregiao": {
+   "id": 41037,
+   "nome": "Curitiba",
+   "mesorregiao": {
+    "id": 4110,
+    "nome": "Metropolitana de Curitiba",
+    "UF": {
+     "id": 41,
+     "sigla": "PR",
+     "nome": "Paraná",
+     "regiao": {
+      "id": 4,
+      "sigla": "S",
+      "nome": "Sul"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 410001,
+   "nome": "Curitiba",
+   "regiao-intermediaria": {
+    "id": 4101,
+    "nome": "Curitiba",
+    "UF": {
+     "id": 41,
+     "sigla": "PR",
+     "nome": "Paraná",
+     "regiao": {
+      "id": 4,
+      "sigla": "S",
+      "nome": "Sul"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 1302603,
+  "nome": "Manaus",
+  "microrregiao": {
+   "id": 13007,
+   "nome": "Manaus",
+   "mesorregiao": {
+    "id": 1303,
+    "nome": "Centro Amazonense",
+    "UF": {
+     "id": 13,
+     "sigla": "AM",
+     "nome": "Amazonas",
+     "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 130001,
+   "nome": "Manaus",
+   "regiao-intermediaria": {
+    "id": 1301,
+    "nome": "Manaus",
+    "UF": {
+     "id": 13,
+     "sigla": "AM",
+     "nome": "Amazonas",
+     "regiao": {
+      "id": 1,
+      "sigla": "N",
+      "nome": "Norte"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 4314902,
+  "nome": "Porto Alegre",
+  "microrregiao": {
+   "id": 43026,
+   "nome": "Porto Alegre",
+   "mesorregiao": {
+    "id": 4305,
+    "nome": "Metropolitana de Porto Alegre",
+    "UF": {
+     "id": 43,
+     "sigla": "RS",
+     "nome": "Rio Grande do Sul",
+     "regiao": {
+      "id": 4,
+      "sigla": "S",
+      "nome": "Sul"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 430001,
+   "nome": "Porto Alegre",
+   "regiao-intermediaria": {
+    "id": 4301,
+    "nome": "Porto Alegre",
+    "UF": {
+     "id": 43,
+     "sigla": "RS",
+     "nome": "Rio Grande do Sul",
+     "regiao": {
+      "id": 4,
+      "sigla": "S",
+      "nome": "Sul"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 2611606,
+  "nome": "Recife",
+  "microrregiao": {
+   "id": 26017,
+   "nome": "Recife",
+   "mesorregiao": {
+    "id": 2605,
+    "nome": "Metropolitana de Recife",
+    "UF": {
+     "id": 26,
+     "sigla": "PE",
+     "nome": "Pernambuco",
+     "regiao": {
+      "id": 2,
+      "sigla": "NE",
+      "nome": "Nordeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 260001,
+   "nome": "Recife",
+   "regiao-intermediaria": {
+    "id": 2601,
+    "nome": "Recife",
+    "UF": {
+     "id": 26,
+     "sigla": "PE",
+     "nome": "Pernambuco",
+     "regiao": {
+      "id": 2,
+      "sigla": "NE",
+      "nome": "Nordeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 3304557,
+  "nome": "Rio de Janeiro",
+  "microrregiao": {
+   "id": 33018,
+   "nome": "Rio de Janeiro",
+   "mesorregiao": {
+    "id": 3306,
+    "nome": "Metropolitana do Rio de Janeiro",
+    "UF": {
+     "id": 33,
+     "sigla": "RJ",
+     "nome": "Rio de Janeiro",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 330001,
+   "nome": "Rio de Janeiro",
+   "regiao-intermediaria": {
+    "id": 3301,
+    "nome": "Rio de Janeiro",
+    "UF": {
+     "id": 33,
+     "sigla": "RJ",
+     "nome": "Rio de Janeiro",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 2927408,
+  "nome": "Salvador",
+  "microrregiao": {
+   "id": 29021,
+   "nome": "Salvador",
+   "mesorregiao": {
+    "id": 2905,
+    "nome": "Metropolitana de Salvador",
+    "UF": {
+     "id": 29,
+     "sigla": "BA",
+     "nome": "Bahia",
+     "regiao": {
+      "id": 2,
+      "sigla": "NE",
+      "nome": "Nordeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 290001,
+   "nome": "Salvador",
+   "regiao-intermediaria": {
+    "id": 2901,
+    "nome": "Salvador",
+    "UF": {
+     "id": 29,
+     "sigla": "BA",
+     "nome": "Bahia",
+     "regiao": {
+      "id": 2,
+      "sigla": "NE",
+      "nome": "Nordeste"
+     }
+    }
+   }
+  }
+ },
+ {
+  "id": 3550308,
+  "nome": "São Paulo",
+  "microrregiao": {
+   "id": 35061,
+   "nome": "São Paulo",
+   "mesorregiao": {
+    "id": 3515,
+    "nome": "Metropolitana de São Paulo",
+    "UF": {
+     "id": 35,
+     "sigla": "SP",
+     "nome": "São Paulo",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  },
+  "regiao-imediata": {
+   "id": 350001,
+   "nome": "São Paulo",
+   "regiao-intermediaria": {
+    "id": 3501,
+    "nome": "São Paulo",
+    "UF": {
+     "id": 35,
+     "sigla": "SP",
+     "nome": "São Paulo",
+     "regiao": {
+      "id": 3,
+      "sigla": "SE",
+      "nome": "Sudeste"
+     }
+    }
+   }
+  }
+ }
+]
