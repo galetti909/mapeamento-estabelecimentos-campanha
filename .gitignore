@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+test-results/
+playwright-report/
+blob-report/
+.vite/
+supabase/.temp/
+supabase/.branches/
+exportacao/
+tests/visual/telas/

@@ -1,0 +1,37 @@
+# Mapa de Campanha - publicacao no Netlify (plano gratuito, subdominio).
+#
+# As variaveis VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY sao cadastradas em
+# Site configuration > Environment variables. A chave de servico NUNCA entra
+# aqui: ela vive somente no .env local do administrador e nos segredos da
+# Edge Function.
+#
+# A Content-Security-Policy e gerada no build em dist/_headers, porque depende
+# da URL do projeto Supabase (ver vite.config.ts). Os cabecalhos abaixo valem
+# como rede de seguranca caso o arquivo _headers nao seja aplicado.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Permissions-Policy = "geolocation=(self), camera=(), microphone=(), payment=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

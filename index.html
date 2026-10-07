@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#14532d" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Mapa de Campanha: voluntários marcam locais com circulação de pessoas e se agendam para conversar."
+    />
+    <title>Mapa de Campanha</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%93%8D%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="pular-para-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <div id="faixa-somente-leitura" class="faixa-aviso" role="status" hidden></div>
+
+    <header id="cabecalho" class="cabecalho" hidden>
+      <button id="abrir-menu" class="cabecalho-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"></button>
+      <h1 class="cabecalho-titulo"><span class="cabecalho-marca">Mapa de Campanha</span></h1>
+      <span id="contador-admin" class="cabecalho-contador" hidden></span>
+    </header>
+
+    <div id="menu-fundo" class="menu-fundo" hidden></div>
+    <nav id="menu" class="menu" hidden aria-label="Navegação principal"></nav>
+
+    <main id="conteudo" class="conteudo" tabindex="-1"></main>
+
+    <div id="avisos" class="avisos" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

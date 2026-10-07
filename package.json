@@ -1,0 +1,43 @@
+{
+  "name": "mapa-de-campanha",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173",
+    "test:unit": "vitest run",
+    "test:e2e": "npm run build && playwright test",
+    "test:db": "supabase db reset && supabase test db",
+    "test:build": "node tests/build/verificar-bundle.mjs",
+    "test:all": "npm run test:db && npm run test:unit && npm run build && npm run test:build && playwright test",
+    "db:reset": "supabase db reset",
+    "carregar-municipios": "tsx scripts/carregar-municipios.ts",
+    "criar-admin": "tsx scripts/criar-admin.ts",
+    "importar-osm": "tsx scripts/importar-osm.ts",
+    "importar-csv": "tsx scripts/importar-csv.ts",
+    "exportar": "tsx scripts/exportar.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/leaflet": "^1.9.20",
+    "@types/leaflet.markercluster": "^1.5.6",
+    "@types/node": "^24.6.0",
+    "dotenv": "^17.2.3",
+    "happy-dom": "^20.14.5",
+    "supabase": "^2.50.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.7",
+    "vitest": "^3.2.4"
+  }
+}
