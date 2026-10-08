@@ -39,9 +39,12 @@ enable_manual_linking = false
 minimum_password_length = 10
 password_requirements = ""
 
-[auth.sessions]
 # "Sessao expira apos 7 dias sem uso" (Requisitos nao funcionais).
-inactivity_timeout = "168h"
+# O Supabase hospedado so aceita configurar sessoes no plano Pro; no plano
+# gratuito o "supabase config push" e recusado com esta secao presente. Por
+# isso ela fica comentada. Para religar num plano Pro, descomente:
+# [auth.sessions]
+# inactivity_timeout = "168h"
 
 [auth.email]
 enable_signup = true
@@ -61,7 +64,9 @@ enable_confirmations = false
 # Limite de inscricoes por IP (defesa contra inscricoes falsas em massa).
 sign_in_sign_ups = 30
 token_refresh = 150
-anonymous_users = 0
+# O Supabase hospedado exige no minimo 1. Sem efeito: o login anonimo esta
+# desligado (enable_anonymous_sign_ins = false).
+anonymous_users = 1
 
 [auth.mfa]
 max_enrolled_factors = 0
