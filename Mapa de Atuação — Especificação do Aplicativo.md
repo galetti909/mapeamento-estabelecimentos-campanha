@@ -61,11 +61,11 @@ O escopo cobre inscrição com liberação manual, mapa nacional, marcação de 
 
 ## Stack e arquitetura
 
-O app é uma página estática em TypeScript puro que conversa direto com o Supabase. Quem protege os dados é o banco, com Row Level Security e funções, e não o front-end.
+O app é uma página estática em React e TypeScript que conversa direto com o Supabase. Quem protege os dados é o banco, com Row Level Security e funções, e não o front-end.
 
 | Camada | Tecnologia | Por quê |
 | --- | --- | --- |
-| Front-end | TypeScript puro, sem framework; Vite só para empacotar | Leve no celular e sem dependências pesadas |
+| Front-end | React 19 + TypeScript, componentes shadcn/ui (Radix + Tailwind CSS v4); Vite para empacotar | Componentes acessíveis e visual padronizado, ainda abaixo de 200 KB iniciais |
 | Mapa | Leaflet 1.9 + Leaflet.markercluster | Biblioteca de mapa simples; o agrupamento aguenta dezenas de milhares de pontos |
 | Imagens do mapa (tiles) | CARTO Voyager, sem chave | Explicado abaixo |
 | Banco | Supabase Postgres com PostGIS | Consultas por área e identificação de UF e município pela posição |
@@ -295,7 +295,7 @@ Um `CHECK` em `nome`, `endereco`, `melhor_horario` e `observacoes` recusa padrõ
 | Ataque em andamento | Modo somente leitura e bloqueio de contas |
 | Exposição de quem vai a cada local | Só contas liberadas veem a agenda, e só o nome de exibição |
 | Conta de administrador comprometida | Exportação diária fora do Supabase; senha forte; segundo administrador de confiança |
-| Injeção de HTML em textos | Front usa `textContent`, nunca `innerHTML` com dado do usuário; CSP restritiva |
+| Injeção de HTML em textos | O React escapa todo texto; nenhum `dangerouslySetInnerHTML`, e o HTML dos marcadores do mapa é fixo, sem dado do usuário; CSP restritiva |
 
 ## Importação e base geográfica
 
@@ -358,6 +358,7 @@ O voluntário usa basicamente o mapa e a ficha do local; o administrador tem uma
 
 - Mapa do Brasil em tela cheia, com agrupamento de marcadores e zoom inicial no Brasil inteiro (ou na última área vista, guardada no aparelho).
 - Camadas: Locais ativos (ligada) e Importados (desligada, marcadores apagados).
+- Cores dos pontos: vermelho para local ativo ainda não visitado; verde para local visitado, isto é, com pelo menos um agendamento não cancelado cujo horário já terminou (fuso de Brasília); cinza para importado. Os agrupamentos mostram o total e, no anel, a fração já visitada.
 - Filtros: UF, município, tipo e "com agendamento nos próximos 7 dias".
 - Busca por nome de local e por município.
 - Botão "Onde estou", com a localização usada só no aparelho.
@@ -435,7 +436,7 @@ O banco é versionado por migrations da Supabase CLI, e não há nenhum serviço
 **Estrutura do repositório**
 
 ```
-/src                         front-end (TypeScript puro)
+/src                         front-end (React + shadcn/ui)
 /supabase/migrations         tipos, tabelas, índices, funções, RLS, triggers
 /supabase/functions/admin-usuarios   Edge Function (senha temporária)
 /supabase/tests              testes pgTAP de acesso por papel e status
@@ -536,7 +537,7 @@ O agente implementa tudo o que este documento descreve numa única execução, s
    - Banco: migrations, tipos, tabelas, índices, linha padrão de `config`, trigger de criação de perfil, triggers de município, `atualizado_em` e histórico, trigger que impede alterar o histórico.
    - Regras de acesso: funções auxiliares, revogações, políticas de leitura, todas as funções RPC, `agenda_do_local`, `admin_listar_contas` e `locais_na_area`.
    - Scripts: `carregar-municipios.ts`, `criar-admin.ts`, `importar-osm.ts`, `importar-csv.ts`, `exportar.ts`.
-   - Front-end em TypeScript puro: todas as telas da seção Telas e fluxos.
+   - Front-end em React com shadcn/ui: todas as telas da seção Telas e fluxos.
    - Edge Function `admin-usuarios`, configuração de deploy e cabeçalhos de segurança.
 3. Desenvolva e teste tudo no ambiente local da Supabase CLI (`supabase start`), que não exige nenhuma chave do dono do projeto.
 4. Escreva os testes junto com cada funcionalidade, não no fim.

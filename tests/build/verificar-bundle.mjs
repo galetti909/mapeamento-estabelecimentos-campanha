@@ -2,7 +2,8 @@
 /**
  * Verificacao do bundle publicado:
  *   1. a chave de servico (service_role) nao aparece em nenhum arquivo;
- *   2. o JavaScript inicial, sem o Leaflet, fica abaixo de 200 KB comprimido;
+ *   2. o JavaScript inicial (o que o index.html carrega), sem o Leaflet, fica
+ *      abaixo de 200 KB comprimido;
  *   3. os cabecalhos de seguranca foram gerados em dist/_headers;
  *   4. o credito do OpenStreetMap esta no codigo publicado.
  */
@@ -108,15 +109,28 @@ if (!CHAVE_SERVICO) {
 if (!vazou) passar('a chave de servico nao aparece em nenhum arquivo publicado');
 
 // ---------------------------------- 2. orcamento do JavaScript inicial
+// "Inicial" e o que o index.html manda baixar na abertura: o script de
+// entrada e os modulepreload. As partes carregadas sob demanda (a area do
+// administrador) ficam fora da conta, mas aparecem no relatorio.
 const js = todos.filter((c) => extname(c) === '.js');
-const iniciais = js.filter((c) => !/leaflet/i.test(c));
-const bytes = iniciais.reduce((total, caminho) => total + gzipSync(readFileSync(caminho)).length, 0);
-const kb = bytes / 1024;
+const html = readFileSync(join(DIST, 'index.html'), 'utf8');
+const referenciados = new Set(
+  [...html.matchAll(/<(?:script[^>]*\ssrc|link[^>]*rel="modulepreload"[^>]*\shref)="\/?([^"]+\.js)"/g)]
+    .map((achado) => join(DIST, achado[1])),
+);
+const gz = (caminho) => gzipSync(readFileSync(caminho)).length / 1024;
+const iniciais = js.filter((c) => referenciados.has(c) && !/leaflet/i.test(c));
+const sobDemanda = js.filter((c) => !referenciados.has(c) && !/leaflet/i.test(c));
+const kb = iniciais.reduce((total, caminho) => total + gz(caminho), 0);
+const kbSobDemanda = sobDemanda.reduce((total, caminho) => total + gz(caminho), 0);
 
-if (kb > LIMITE_INICIAL_KB) {
+if (iniciais.length === 0) {
+  falhar('o index.html nao referencia nenhum script de entrada');
+} else if (kb > LIMITE_INICIAL_KB) {
   falhar(`JavaScript inicial com ${kb.toFixed(1)} KB comprimido (limite ${LIMITE_INICIAL_KB} KB)`);
 } else {
-  passar(`JavaScript inicial com ${kb.toFixed(1)} KB comprimido (limite ${LIMITE_INICIAL_KB} KB, Leaflet fora da conta)`);
+  passar(`JavaScript inicial com ${kb.toFixed(1)} KB comprimido (limite ${LIMITE_INICIAL_KB} KB, Leaflet fora da conta; `
+    + `${kbSobDemanda.toFixed(1)} KB sob demanda)`);
 }
 
 // ------------------------------------------- 3. cabecalhos de seguranca

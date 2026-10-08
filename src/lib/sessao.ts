@@ -39,7 +39,10 @@ export async function carregarSessao(): Promise<void> {
   estado.perfil = null;
   estado.config = null;
 
-  if (!usuario) return;
+  if (!usuario) {
+    notificarSessao();
+    return;
+  }
 
   // As duas leituras saem juntas: em rede movel, uma ida a mais ao servidor
   // atrasa a abertura do mapa. A config so e legivel por conta ativa, e nesse
@@ -58,6 +61,7 @@ export async function carregarSessao(): Promise<void> {
   if (estado.perfil?.status === 'ativo') {
     estado.config = (respostaConfig.data as Config | null) ?? null;
   }
+  notificarSessao();
 }
 
 export async function sair(): Promise<void> {
@@ -66,4 +70,26 @@ export async function sair(): Promise<void> {
   estado.email = null;
   estado.perfil = null;
   estado.config = null;
+  notificarSessao();
+}
+
+// ------------------------------------------------------------- React
+// O estado continua sendo um objeto simples (os testes e os scripts o leem
+// direto). As telas React assinam as mudancas por esta pequena loja.
+let versao = 0;
+const ouvintes = new Set<() => void>();
+
+/** Avisa as telas de que o estado mudou. */
+export function notificarSessao(): void {
+  versao += 1;
+  for (const ouvinte of ouvintes) ouvinte();
+}
+
+export function assinarSessao(ouvinte: () => void): () => void {
+  ouvintes.add(ouvinte);
+  return () => ouvintes.delete(ouvinte);
+}
+
+export function versaoSessao(): number {
+  return versao;
 }

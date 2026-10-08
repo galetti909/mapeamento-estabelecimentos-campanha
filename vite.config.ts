@@ -1,5 +1,7 @@
 import { writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 import { defineConfig, loadEnv, type Plugin } from 'vite';
 
 /** Dominio do servidor de tiles (ver src/lib/mapa-base.ts). */
@@ -66,7 +68,10 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    plugins: [cabecalhosDeSeguranca(env.VITE_SUPABASE_URL ?? '')],
+    plugins: [react(), tailwindcss(), cabecalhosDeSeguranca(env.VITE_SUPABASE_URL ?? '')],
+    resolve: {
+      alias: { '@': resolve(process.cwd(), 'src') },
+    },
     build: {
       target: 'es2022',
       sourcemap: false,

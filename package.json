@@ -23,19 +23,34 @@
     "exportar": "tsx scripts/exportar.ts"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
     "@supabase/supabase-js": "^2.58.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "leaflet": "^1.9.4",
-    "leaflet.markercluster": "^1.5.3"
+    "leaflet.markercluster": "^1.5.3",
+    "lucide-react": "^1.52.0",
+    "radix-ui": "^1.7.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/leaflet": "^1.9.20",
     "@types/leaflet.markercluster": "^1.5.6",
     "@types/node": "^24.6.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^5.2.0",
     "dotenv": "^17.2.3",
     "happy-dom": "^20.14.5",
     "supabase": "^2.50.5",
+    "tailwindcss": "^4.3.3",
     "tsx": "^4.20.6",
+    "tw-animate-css": "^1.4.0",
     "typescript": "^5.9.3",
     "vite": "^7.1.7",
     "vitest": "^3.2.4"

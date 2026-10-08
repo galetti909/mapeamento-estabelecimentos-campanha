@@ -35,6 +35,9 @@ export interface MarcadorPonto {
   municipio_nome: string | null;
   uf: string | null;
   quantidade: null;
+  /** Teve agendamento já encerrado (o ponto fica verde). */
+  visitado: boolean;
+  visitados: null;
 }
 
 export interface MarcadorContagem {
@@ -49,6 +52,9 @@ export interface MarcadorContagem {
   municipio_nome: string;
   uf: string;
   quantidade: number;
+  visitado: null;
+  /** Quantos dos locais do município já foram visitados. */
+  visitados: number;
 }
 
 export type Marcador = MarcadorPonto | MarcadorContagem;
